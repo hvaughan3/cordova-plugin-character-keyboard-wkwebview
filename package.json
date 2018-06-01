@@ -1,0 +1,18 @@
+{
+  "name": "cordova-plugin-character-keyboard-wkwebview",
+  "version": "1.0.4",
+  "cordova": {
+    "id": "cordova-plugin-character-keyboard-wkwebview",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "description": "Cordova plugin character keyboard for wkwebview",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/hvaughan3/cordova-plugin-character-keyboard-wkwebview.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hvaughan3/cordova-plugin-character-keyboard-wkwebview/issues"
+  }
+}

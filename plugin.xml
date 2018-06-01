@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="cordova-plugin-character-keyboard-wkwebview" version="1.0.3">
+    <name>Character Keyboard</name>
+    <description>Cordova Character Keyboard Plugin with WKWebView support</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova, keyboard, decimal, dash, character, decimal keyboard, dash keyboard, wkwebview</keywords>
+
+    <engines>
+    <engine name="cordova" version=">=3.2.0" />
+    </engines>
+
+    <js-module src="www/character-keyboard.js" name="characterKeyboard">
+        <clobbers target="window.CharacterKeyboard" />
+    </js-module>
+
+    <!-- ios -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="CharacterKeyboard">
+                <param name="ios-package" value="CDVCharacterKeyboard" onload="true" />
+            </feature>
+        </config-file>
+
+        <header-file src="src/ios/CDVCharacterKeyboard.h" />
+        <source-file src="src/ios/CDVCharacterKeyboard.m" />
+    </platform>
+</plugin>
