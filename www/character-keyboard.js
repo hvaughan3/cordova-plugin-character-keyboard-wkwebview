@@ -96,7 +96,7 @@ CharacterKeyboard.getDashChar = function(activeElement){
 	var dashChar = null;
 	if(activeElement.attributes["dash-char"]==undefined ||
 		activeElement.attributes["dash-char"]=='undefined'){
-		dashChar=','
+		dashChar='-'
 	}else{
 		dashChar=activeElement.attributes["dash-char"].value;
 	}
