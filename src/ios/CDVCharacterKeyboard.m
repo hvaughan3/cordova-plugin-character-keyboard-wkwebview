@@ -324,6 +324,18 @@ BOOL stopSearching=NO;
     }
 }
 
+- (void) removeDashButton{
+    [dashButton removeFromSuperview];
+    dashButton=nil;
+    stopSearching=NO;
+}
+
+- (void) deleteDashButton{
+    [dashButton removeFromSuperview];
+    dashButton=nil;
+    stopSearching=NO;
+}
+
 - (void)dashButtonPressed:(UIButton *)button {
     [dashButton setBackgroundColor: [UIColor colorWithRed:210/255.0 green:213/255.0 blue:218/255.0 alpha:1.0]];
     [self evaluateJavaScript:@"CharacterKeyboard.addDash();" completionHandler:nil];
