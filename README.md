@@ -1,17 +1,17 @@
 # cordova-plugin-decimal-keyboard-wkwebview
 [![Linked In](https://img.shields.io/badge/Linked-In-blue.svg)](https://www.linkedin.com/in/john-i-doherty) [![Twitter Follow](https://img.shields.io/twitter/follow/CambridgeMVP.svg?style=social&label=Twitter&style=plastic)](https://twitter.com/CambridgeMVP)
 
-Cordova plugin to show decimal keyboard on iOS devices.
+Cordova plugin to show decimal or dash key on the iOS keyboard.
 
-Taken from [mrchandoo's](https://github.com/mrchandoo) repo [cordova-plugin-decimal-keyboard](https://github.com/mrchandoo/cordova-plugin-decimal-keyboard) and merged with [ericdesa](https://github.com/ericdesa) WKWebView fix.
+Taken from [mrchandoo's](https://github.com/mrchandoo) repo [cordova-plugin-decimal-keyboard](https://github.com/mrchandoo/cordova-plugin-decimal-keyboard) and merged with [ericdesa](https://github.com/ericdesa) WKWebView fix into [cordova-plugin-decimal-keyboard](https://github.com/john-doherty/cordova-plugin-decimal-keyboard-wkwebview) and further modified before being checked into this repo.
 
 ## Install
 
 ```bash
-cordova plugin add --save cordova-plugin-decimal-keyboard-wkwebview
+cordova plugin add --save https://github.com/hvaughan3/cordova-plugin-character-keyboard-wkwebview
 ```
 
-## Usage
+## Decimal Usage
 
 ```html
 <input type="text" pattern="[0-9]*" decimal="true">
@@ -19,15 +19,11 @@ cordova plugin add --save cordova-plugin-decimal-keyboard-wkwebview
 
 Input type number will not work, try to use text with [0-9] pattern instead.
 
-<img src="screenshots/basic-usage.png" width="25%" height="25%" /> <img src="screenshots/basic-usage-typed-content.png" width="25%" height="25%" />
-
 ## Multiple decimals
 
 ```html
 <input type="text" pattern="[0-9]*" decimal="true" allow-multiple-decimals="true">
 ```
-
-<img src="screenshots/multiple-decimals.png" width="25%" height="25%" />
 
 ### Different decimal character
 
@@ -37,7 +33,27 @@ Input type number will not work, try to use text with [0-9] pattern instead.
 
 If you want to localize decimal character, you can change using decimal-char attribute
 
-<img src="screenshots/different-decimal-char.png" width="25%" height="25%" />
+## Dash Usage
+
+```html
+<input type="text" pattern="[0-9]*" dash="true">
+```
+
+Input type number will not work, try to use text with [0-9] pattern instead.
+
+## Multiple dashes
+
+```html
+<input type="text" pattern="[0-9]*" dash="true" allow-multiple-dashes="true">
+```
+
+### Different dash character
+
+```html
+<input type="text" pattern="[0-9]*" dash="true" allow-multiple-dashes="false" dash-char=",">
+```
+
+If you want to localize dash character, you can change using dash-char attribute
 
 ## Known Issues
 * Does not handle screen rotation.
