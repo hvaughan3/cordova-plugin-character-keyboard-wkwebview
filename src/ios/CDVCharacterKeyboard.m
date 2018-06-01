@@ -191,7 +191,7 @@ BOOL stopSearching=NO;
             forControlEvents:UIControlEventTouchUpOutside];
 
     decimalButton.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
-    [decimalButton setTitleEdgeInsets:UIEdgeInsetsMake(-20.0f, 0.0f, 0.0f, 0.0f)];
+    [decimalButton setTitleEdgeInsets:UIEdgeInsetsMake(0.0f, 0.0f, 0.0f, 0.0f)];
     [decimalButton setBackgroundColor: [UIColor colorWithRed:210/255.0 green:213/255.0 blue:218/255.0 alpha:1.0]];
 
     // locate keyboard view
