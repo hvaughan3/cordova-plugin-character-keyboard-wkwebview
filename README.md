@@ -1,4 +1,4 @@
-# cordova-plugin-decimal-keyboard-wkwebview
+# cordova-plugin-character-keyboard-wkwebview
 [![Linked In](https://img.shields.io/badge/Linked-In-blue.svg)](https://www.linkedin.com/in/john-i-doherty) [![Twitter Follow](https://img.shields.io/twitter/follow/CambridgeMVP.svg?style=social&label=Twitter&style=plastic)](https://twitter.com/CambridgeMVP)
 
 Cordova plugin to show decimal or dash key on the iOS keyboard.
