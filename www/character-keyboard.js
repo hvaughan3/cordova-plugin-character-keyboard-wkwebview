@@ -64,9 +64,9 @@ CharacterKeyboard.addDecimal = function(){
 		if(value.indexOf(decimalChar) > -1)
 			return;
 		else{
-			if(caretPosStart==0){
-				first='0';
-			}
+			// if(caretPosStart==0){
+			// 	first='0';
+			// }
 			valueToSet = first+decimalChar+last;
 		}
 	}
