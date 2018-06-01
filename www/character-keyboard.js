@@ -124,7 +124,7 @@ CharacterKeyboard.addDash = function(){
 	first = value.substring(0, caretPosStart);
 	last = value.substring(caretPosEnd);
 
-	if(allowMultipleDashs){
+	if(allowMultipleDashes){
 		valueToSet = first+dashChar+last;
 	}else{
 		if(value.indexOf(dashChar) > -1)
