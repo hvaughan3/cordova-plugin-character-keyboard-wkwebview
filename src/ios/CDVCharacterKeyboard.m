@@ -89,11 +89,11 @@ BOOL isDifferentKeyboardShown=NO;
     [self isTextOrNumberAndDash:^(BOOL isDashKeyRequired) {
         // create custom button
         if(dashButton == nil){
-            if(isDecimalKeyRequired){
+            if(isDashKeyRequired){
                 [self addDashButton];
             }
         }else{
-            if(isDecimalKeyRequired){
+            if(isDashKeyRequired){
                 dashButton.hidden=NO;
                 [self setDashChar];
             }else{
