@@ -251,8 +251,9 @@ BOOL stopSearching=NO;
            completionHandler:^(NSString * _Nullable response, NSError * _Nullable error) {
                BOOL isText = [response isEqual:@"text"];
                BOOL isNumber = [response isEqual:@"number"];
+               BOOL isTelephone = [response isEqual:@"tel"];
 
-               if (isText || isNumber) {
+               if (isText || isNumber || isTelephone) {
                    [self evaluateJavaScript:@"CharacterKeyboard.isDecimal();"
                           completionHandler:^(NSString * _Nullable response, NSError * _Nullable error) {
                               BOOL isDecimal = [response isEqual:@"true"] || [response isEqual:@"1"];
@@ -353,8 +354,9 @@ BOOL stopSearching=NO;
            completionHandler:^(NSString * _Nullable response, NSError * _Nullable error) {
                BOOL isText = [response isEqual:@"text"];
                BOOL isNumber = [response isEqual:@"number"];
+               BOOL isTelephone = [response isEqual:@"tel"];
 
-               if (isText || isNumber) {
+               if (isText || isNumber || isTelephone) {
                    [self evaluateJavaScript:@"CharacterKeyboard.isDash();"
                           completionHandler:^(NSString * _Nullable response, NSError * _Nullable error) {
                               BOOL isDash = [response isEqual:@"true"] || [response isEqual:@"1"];
