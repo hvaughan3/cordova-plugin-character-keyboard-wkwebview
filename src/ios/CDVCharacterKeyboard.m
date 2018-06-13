@@ -257,7 +257,7 @@ BOOL stopSearching=NO;
                    [self evaluateJavaScript:@"CharacterKeyboard.isDecimal();"
                           completionHandler:^(NSString * _Nullable response, NSError * _Nullable error) {
                               BOOL isDecimal = [response isEqual:@"true"] || [response isEqual:@"1"];
-                              BOOL isTextOrNumberAndDecimal = (isText || isNumber) && isDecimal;
+                              BOOL isTextOrNumberAndDecimal = (isText || isNumber || isTelephone) && isDecimal;
                               completionHandler(isTextOrNumberAndDecimal);
                           }];
                } else {
@@ -360,7 +360,7 @@ BOOL stopSearching=NO;
                    [self evaluateJavaScript:@"CharacterKeyboard.isDash();"
                           completionHandler:^(NSString * _Nullable response, NSError * _Nullable error) {
                               BOOL isDash = [response isEqual:@"true"] || [response isEqual:@"1"];
-                              BOOL isTextOrNumberAndDash = (isText || isNumber) && isDash;
+                              BOOL isTextOrNumberAndDash = (isText || isNumber || isTelephone) && isDash;
                               completionHandler(isTextOrNumberAndDash);
                           }];
                } else {
