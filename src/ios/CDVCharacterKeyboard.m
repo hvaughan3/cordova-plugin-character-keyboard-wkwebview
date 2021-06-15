@@ -50,13 +50,19 @@ BOOL isAppInBackground=NO;
 }
 
 BOOL isDifferentKeyboardShown=NO;
+double maxKeyboardAnimationDuration=0;
 
 - (void) keyboardWillAppear: (NSNotification*) n{
     NSDictionary* info = [n userInfo];
     NSNumber* value = [info objectForKey:UIKeyboardAnimationDurationUserInfoKey];
     double dValue = [value doubleValue];
+    
+    // the only thing I found about the animation duration being 0 is here: https://stackoverflow.com/a/9511175/1530166
+    if (dValue > maxKeyboardAnimationDuration) {
+        maxKeyboardAnimationDuration = dValue;
+    }
 
-    if(dValue <= 0.0){
+    if(maxKeyboardAnimationDuration <= 0.0){
         [self removeDecimalButton];
         [self removeDashButton];
         return;
